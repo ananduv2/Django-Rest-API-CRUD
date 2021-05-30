@@ -29,7 +29,7 @@ urlpatterns = [
     path('test/courses/<int:CourseId>', views.coursedetail.as_view()),
     path('test/courses/edit/<int:CourseId>', views.editcourse.as_view()),
     path('test/courses/delete/<int:CourseId>',views.deletecourse.as_view()),
-    path('/sapp/v1/createStudentRecord', views.addstudent.as_view()),
-    path('/sapp/v1/getStudentRecord/<int:StudentId>', views.studentdetail.as_view()),
+    path('sapp/v1/createStudentRecord', views.addstudent.as_view()),
+    path('sapp/v1/getStudentRecord/<int:StudentId>', views.studentdetail.as_view()),
 
 ]
