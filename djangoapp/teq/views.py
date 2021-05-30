@@ -57,7 +57,18 @@ class editstudent(APIView):
             'StudentId':request.data.get('StudentId'),
             'StudentName':request.data.get('StudentName'),
             'StudentMob':request.data.get('StudentMob'),
-            'StudentEmail':request.data.get('StudentEmail') 
+            'StudentEmail':request.data.get('StudentEmail'),
+            'Course': request.data.get('Course'),
+            'SelectedBatch': request.data.get('SelectedBatch'),
+            'DOJ': request.data.get('DOJ'),
+            'Fees': request.data.get('Fees'),
+            'PaidFees': request.data.get('PaidFees'),
+            'LastFeesPaidOn': request.data.get('LastFeesPaidOn'),
+            'ModeOfPayment': request.data.get('ModeOfPayment'),
+            'PendingFees': request.data.get('PendingFees'),
+            'LeadSource': request.data.get('LeadSource'),
+            'LeadLocation': request.data.get('LeadLocation'),
+            'Executive': request.data.get('Executive')
         }
         serializer = StudentSerializer(student, data=data, partial = True)
         if serializer.is_valid():

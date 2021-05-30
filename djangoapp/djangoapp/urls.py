@@ -19,14 +19,17 @@ from teq import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('students/', views.studentlist.as_view()),
-    path('students/add', views.addstudent.as_view()),
-    path('students/<int:StudentId>', views.studentdetail.as_view()),
-    path('students/edit/<int:StudentId>', views.editstudent.as_view()),
-    path('students/delete/<int:StudentId>',views.deletestudent.as_view()),
-    path('courses/', views.courselist.as_view()),
-    path('courses/add', views.addcourse.as_view()),
-    path('courses/<int:CourseId>', views.coursedetail.as_view()),
-    path('courses/edit/<int:CourseId>', views.editcourse.as_view()),
-    path('courses/delete/<int:CourseId>',views.deletecourse.as_view()),
+    path('test/students/', views.studentlist.as_view()),
+    path('test/students/add', views.addstudent.as_view()),
+    path('test/students/<int:StudentId>', views.studentdetail.as_view()),
+    path('test/students/edit/<int:StudentId>', views.editstudent.as_view()),
+    path('test/students/delete/<int:StudentId>',views.deletestudent.as_view()),
+    path('test/courses/', views.courselist.as_view()),
+    path('test/courses/add', views.addcourse.as_view()),
+    path('test/courses/<int:CourseId>', views.coursedetail.as_view()),
+    path('test/courses/edit/<int:CourseId>', views.editcourse.as_view()),
+    path('test/courses/delete/<int:CourseId>',views.deletecourse.as_view()),
+    path('/sapp/v1/createStudentRecord', views.addstudent.as_view()),
+    path('/sapp/v1/getStudentRecord/<int:StudentId>', views.studentdetail.as_view()),
+
 ]
